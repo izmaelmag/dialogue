@@ -11,7 +11,7 @@
   "private": false,
   "scripts": {
     "build:ts": "npx tsc",
-    "build:css": "postcss src/main.css --base src --dir dist",
+    "build:css": "postcss src/main.css --base src --dir dist --config config/postcss.config.js",
     "build": "yarn dist:clear && yarn build:ts && yarn build:css",
     "dist:clear": "rm -rf dist"
   },
