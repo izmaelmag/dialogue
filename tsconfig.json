@@ -2,13 +2,19 @@
   "compilerOptions": {
     "declaration": true,
     "target": "esnext",
-    "module": "esnext",
+    "module": "NodeNext",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "jsx": "react-jsx",
+    "moduleResolution": "NodeNext",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
   },
-  "include": ["lib/src/**/*.ts"],
+  "include": ["./src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
