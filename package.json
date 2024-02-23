@@ -4,18 +4,23 @@
   "description": "JS library to create animated RPG-like text animations",
   "main": "./dist/index.js",
   "types": "./dist/types.d.ts",
-  "style": "./dist/main.css",
+  "style": "./dist/index.css",
   "repository": "git@github.com:izmaelmag/dialogue.git",
   "author": "Ismail Magomedov <ismail@variant.net>",
   "license": "MIT",
   "private": false,
   "scripts": {
     "build:ts": "npx tsc",
-    "build:css": "postcss src/main.css --base src --dir dist --config config/postcss.config.js",
+    "build:css": "postcss src/styles.css --base src --dir dist --config config/postcss.config.js",
     "build": "yarn dist:clear && yarn build:ts && yarn build:css",
-    "dist:clear": "rm -rf dist"
+    "dist:clear": "rm -rf dist",
+    "dev": "yarn dist:clear && conc \"yarn build:ts --watch\" \"yarn build:css --watch\""
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "esbuild": "^0.20.1",
+    "typescript": "^5.3.3",
     "autoprefixer": "^10.4.17",
     "copyfiles": "^2.4.1",
     "cssnano": "^6.0.4",
@@ -24,9 +29,5 @@
     "postcss-color-mod-function": "^3.0.3",
     "postcss-import": "^16.0.1",
     "postcss-nested": "^6.0.1"
-  },
-  "devDependencies": {
-    "esbuild": "^0.20.1",
-    "typescript": "^5.3.3"
   }
 }
