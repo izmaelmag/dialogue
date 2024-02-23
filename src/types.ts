@@ -2,22 +2,22 @@ export type WordConfig = {
   delay: number;
 };
 
-type FX = string
+type FX = string;
 
 type Part = {
-  text: string,
-  fx?: FX[]
-}
+  text: string;
+  fx?: FX[];
+};
 
-export interface PhraseConfig {
+export type PhraseConfig = {
   intro: {
     fx: FX[];
-  
+
     staggering: {
       type: "letter" | "word";
       delay: number;
     };
   };
 
-  parts: Part[]
-}
+  parts: Part[];
+};
