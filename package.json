@@ -1,6 +1,6 @@
 {
   "name": "@izmaelmag/dialogue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "JS library to create animated RPG-like text animations",
   "main": "./dist/index.js",
   "types": "./dist/types.d.ts",
