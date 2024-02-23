@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 import { type WordConfig } from "~/types";
 
 const defaultConfig: WordConfig = {
@@ -11,5 +11,23 @@ type Props = {
 };
 
 export const Word = ({ config = defaultConfig, children }: Props) => {
-  return <div>{children}</div>;
+  const { delay } = config;
+
+  const letters = children?.toString().split("");
+
+  return (
+    <div>
+      {letters?.map((letter, index) => {
+        return (
+          <span
+            key={index}
+            className="dg-wiggle"
+            style={{ animationDelay: `${delay * index}s` }}
+          >
+            {letter}
+          </span>
+        );
+      })}
+    </div>
+  );
 };
