@@ -18,6 +18,8 @@ export const Word = ({ config = defaultConfig, children }: Props) => {
   return (
     <div>
       {letters?.map((letter, index) => {
+        if (letter === ' ') return <span>{' '}</span>
+        
         return (
           <span
             key={index}

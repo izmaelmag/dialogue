@@ -1,4 +1,4 @@
-import { Word } from "@izmaelmag/dialogue/dist/react";
+import { Word, Phrase, demo } from "@izmaelmag/dialogue/dist/react";
 import { WordConfig } from "@izmaelmag/dialogue";
 import "@izmaelmag/dialogue/dist/styles.css";
 
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <h1>Playground</h1>
-      <Word config={config}>Check</Word>
+      <Phrase config={demo} />
     </>
   );
 }
