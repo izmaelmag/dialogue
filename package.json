@@ -2,7 +2,7 @@
   "name": "@izmaelmag/dialogue",
   "version": "1.0.0",
   "description": "JS library to create animated RPG-like text animations",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "types": "./dist/main.d.ts",
   "repository": "git@github.com:izmaelmag/dialogue.git",
   "author": "Ismail Magomedov <ismail@variant.net>",
