@@ -1,0 +1,6 @@
+@import "./shake.css";
+@import "./fade.css";
+
+:root {
+  --dg-intensity: 1;
+}

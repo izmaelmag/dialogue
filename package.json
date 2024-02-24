@@ -1,5 +1,5 @@
 {
-  "name": "@izmaelmag/dialogue",
+  "name": "dialogue",
   "version": "1.0.2",
   "description": "JS library to create animated RPG-like text animations",
   "main": "./dist/index.js",
@@ -10,19 +10,19 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "test": "jest",
     "build:ts": "npx tsc",
-    "build:css": "postcss src/styles.css --base src --dir dist --config config/postcss.config.js",
+    "build:css": "postcss src/styles/main.css -o dist/styles.css --config config/postcss.config.js",
     "build": "yarn dist:clear && yarn build:ts && yarn build:css",
     "dist:clear": "rm -rf dist",
+    "test": "jest",
     "dev": "yarn dist:clear && conc \"yarn build:ts --watch\" \"yarn build:css --watch\""
   },
   "dependencies": {
-    "@types/react": "^18.2.58",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/react": "^18.2.58",
     "@types/jest": "^29.5.12",
     "autoprefixer": "^10.4.17",
     "concurrently": "^8.2.2",

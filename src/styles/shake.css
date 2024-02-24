@@ -1,0 +1,38 @@
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(calc(-1px * var(--dg-intensity)));
+    transform: translateY(calc(-1px * var(--dg-intensity)));
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(calc(1px * var(--dg-intensity)));
+  }
+}
+
+.dg-shake {
+  display: inline-block;
+  animation-name: shake;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-play-state: running;
+
+  &:nth-child(2n) {
+    animation-direction: reverse;
+  }
+}

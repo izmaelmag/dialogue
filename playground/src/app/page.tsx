@@ -1,16 +1,26 @@
-import { Word, Phrase, demo } from "@izmaelmag/dialogue/dist/react";
-import { WordConfig } from "@izmaelmag/dialogue";
-import "@izmaelmag/dialogue/dist/styles.css";
-
-const config: WordConfig = {
-  delay: 0.05,
-};
+import "dialogue/dist/styles.css";
 
 export default function Home() {
   return (
     <>
-      <h1>Playground</h1>
-      <Phrase config={demo} />
+      <div className="dg-shake">
+        {"Some long sentence".split("").map((char, index) => {
+          return (
+            <span
+              style={{ animationDelay: `${index * 0.02}s` }}
+              className="dg-fadeIn"
+              key={index}
+            >
+              <span
+                style={{ animationDelay: `-${index * 0.0333}s` }}
+                className="dg-shake"
+              >
+                {char !== ' ' ? char : <span>&nbsp;</span>}
+              </span>
+            </span>
+          );
+        })}
+      </div>
     </>
   );
 }
