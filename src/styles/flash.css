@@ -1,0 +1,16 @@
+@keyframes dg-flash {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.dg-flash {
+  display: inline-block;
+  animation: dg-flash 2s infinite;
+}

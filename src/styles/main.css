@@ -1,0 +1,51 @@
+@import "./shake.css";
+@import "./fade.css";
+@import "./pulse.css";
+@import "./bounce.css";
+@import "./wobble.css";
+@import "./glow.css";
+@import "./swing.css";
+@import "./flash.css";
+
+:root {
+  --dg-intensity: 1;
+}
+
+.dg-bullet-trail {
+  display: inline-block;
+  animation: dg-bullet-trail 0.1s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes dg-bullet-trail {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.dg-ricochet {
+  display: inline-block;
+  animation: dg-ricochet 1s cubic-bezier(0.68, -0.55, 0.265, 2) both;
+}
+
+@keyframes dg-ricochet {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-4px, -6px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(4px, 2px);
+  }
+  /* Continue with the rest of the keyframes */
+}

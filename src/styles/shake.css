@@ -1,0 +1,52 @@
+@keyframes shake {
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateY(calc(-1px * var(--dg-intensity)));
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateY(calc(1px * var(--dg-intensity)));
+  }
+}
+
+.dg-shake-y {
+  display: inline-block;
+  animation: shake 2s ease infinite both;
+
+  &:nth-child(2n) {
+    animation-direction: reverse;
+  }
+}
+
+@keyframes shakex {
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(calc(1px * var(--dg-intensity)));
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(calc(-1px * var(--dg-intensity)));
+  }
+}
+
+.dg-shake-x {
+  display: inline-block;
+  animation: shakex 2s ease infinite both;
+
+  &:nth-child(2n) {
+    animation-direction: reverse;
+  }
+}

@@ -1,0 +1,15 @@
+@keyframes dg-glow {
+  0%,
+  100% {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+  }
+}
+
+.dg-glow {
+  display: inline-block;
+  color: #fff;
+  animation: dg-glow 2s infinite;
+}
