@@ -1,15 +1,15 @@
 @keyframes dg-swing {
   20% {
-    transform: rotate(15deg);
+    transform: rotate(9deg);
   }
   40% {
-    transform: rotate(-10deg);
+    transform: rotate(-6deg);
   }
   60% {
-    transform: rotate(5deg);
+    transform: rotate(4deg);
   }
   80% {
-    transform: rotate(-5deg);
+    transform: rotate(-2deg);
   }
   100% {
     transform: rotate(0deg);
@@ -19,5 +19,5 @@
 .dg-swing {
   display: inline-block;
   transform-origin: top center;
-  animation: dg-swing 1s infinite;
+  animation: dg-swing 1s forwards;
 }
