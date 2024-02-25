@@ -12,5 +12,5 @@
 
 .dg-pulse {
   display: inline-block;
-  animation: dg-pulse 1s infinite;
+  animation: dg-pulse 1s both;
 }

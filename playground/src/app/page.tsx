@@ -7,21 +7,23 @@ const phrase =
 export default function Home() {
   return (
     <>
-      <div className={styles.bold} style={{ width: '400px'}}>
-        {phrase.split(" ").map((char, index) => {
+      <div style={{ width: "400px" }}>
+        {phrase.split("").map((char, index) => {
           return (
             <>
               <span key={index}>
                 <span
-                  style={{ animationDelay: `${index * 0.05}s` }}
-                  className="dg-swing"
+                  style={{ animationDelay: `${index * 0.02}s` }}
+                  className="dg-pulse"
                 >
-                  <span className="dg-fadeIn" style={{ animationDelay: `${index * 0.05}s` }}>
+                  <span
+                    className="dg-fadeIn"
+                    style={{ animationDelay: `${index * 0.02}s` }}
+                  >
                     {char !== " " ? char : <span>&nbsp;</span>}
                   </span>
                 </span>
               </span>
-              <span>&nbsp;</span>
             </>
           );
         })}
