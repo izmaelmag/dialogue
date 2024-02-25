@@ -1,5 +1,11 @@
 @import "./shake.css";
 @import "./fade.css";
+@import "./pulse.css";
+@import "./bounce.css";
+@import "./wobble.css";
+@import "./glow.css";
+@import "./swing.css";
+@import "./flash.css";
 
 :root {
   --dg-intensity: 1;

@@ -1,21 +1,22 @@
+import styles from "./styles.module.css";
 import "dialogue/dist/styles.css";
 
 export default function Home() {
   return (
     <>
-      <div className="dg-shake">
+      <div className={styles.bold}>
         {"Some long sentence".split("").map((char, index) => {
           return (
-            <span
-              style={{ animationDelay: `${index * 0.02}s` }}
-              className="dg-fadeIn"
-              key={index}
-            >
+            <span key={index}>
               <span
-                style={{ animationDelay: `-${index * 0.0333}s` }}
-                className="dg-shake"
+                style={{ animationDelay: `-${index * 0.1}s` }}
+                className="dg-shake-y"
               >
-                {char !== ' ' ? char : <span>&nbsp;</span>}
+                <span
+                  style={{ animationDelay: `-${index * 0.22}s` }}
+                >
+                  {char !== " " ? char : <span>&nbsp;</span>}
+                </span>
               </span>
             </span>
           );
