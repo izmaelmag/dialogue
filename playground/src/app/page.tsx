@@ -13,32 +13,40 @@ const words = split(phrase, {
 export default function Home() {
   return (
     <>
-      <div style={{ width: "400px", display: 'flex', flexWrap: 'wrap' }}>
+      <div style={{ width: "400px", display: "flex", flexWrap: "wrap" }}>
         {words.map((word, index) => {
           const wordKey = `word-${index}`;
-          const chars = split (word, { mode: "char", separator: "" });
+          const chars = split(word, { mode: "char", separator: "" });
 
           return (
-            <div key={wordKey} style={{ marginRight: '0.4ch' }}>
+            <div
+              key={wordKey}
+              style={{
+                wordBreak: "keep-all",
+                marginRight: `0.5ch`,
+                animationDelay: `${index * 0.02}s`,
+              }}
+              className="dg-pulse"
+            >
+            <div
+              key={wordKey}
+              style={{
+                wordBreak: "keep-all",
+                marginRight: `0.5ch`,
+                animationDelay: `${index * 0.02}s`,
+              }}
+              className="dg-fadeIn"
+            >
               {chars.map((char, charIndex) => {
-                const charKey = `${wordKey}/char-${charIndex}`
+                const charKey = `${wordKey}/char-${charIndex}`;
 
                 return (
-                  <span key={charKey} style={{ letterSpacing: '-2px'}}>
-                    <span
-                      style={{ animationDelay: `${(charIndex + index) * 0.02}s` }}
-                      className="dg-pulse"
-                    >
-                      <span
-                        className="dg-fadeIn"
-                        style={{ animationDelay: `${(charIndex + index) * 0.02}s` }}
-                      >
-                        {char !== " " ? char : <span>&nbsp;</span>}
-                      </span>
-                    </span>
+                  <span key={charKey} style={{ letterSpacing: "-2px" }}>
+                    {char !== " " ? char : <span>&nbsp;</span>}
                   </span>
                 );
               })}
+            </div>
             </div>
           );
         })}
